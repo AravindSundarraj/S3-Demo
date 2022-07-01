@@ -13,11 +13,12 @@ public class S3DemoApplication {
 
 	public static void main(String[] args) {
 		TestStandardS3 testStandardS3 = new TestStandardS3(S3Config.getInstance().getAmazonS3(),
-				BUCKET_NAME,FILE_NAME,"test-data/loc1");
-		testStandardS3.createBucket();
-		testStandardS3.uploadData();
+				BUCKET_NAME,FILE_NAME,"test-data/arav/loc1");
+		//testStandardS3.createBucket();
+		//testStandardS3.uploadData();
 		//testStandardS3.deleteObject("bucket-key");
 		//testStandardS3.deleteBucket();
+		testStandardS3.getData();
 	}
 
 }

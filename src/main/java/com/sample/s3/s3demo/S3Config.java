@@ -27,13 +27,13 @@ public class S3Config {
             throw new RuntimeException("S3 Object is already created !!! ");
         }
         AWSCredentials credentials = new BasicAWSCredentials(
-                "add your access key",
-                "add your secret key"
+                "accessKey",
+                "secretkey"
         );
         AmazonS3 s3client = AmazonS3ClientBuilder
                 .standard()
                 .withCredentials(new AWSStaticCredentialsProvider(credentials))
-                .withRegion(Regions.EU_CENTRAL_1)
+                .withRegion(Regions.US_EAST_1)
                 .build();
         this.amazonS3 = s3client;
     }
